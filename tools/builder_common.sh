@@ -926,6 +926,7 @@ setup_pkg_repo() {
 	local _target_arch="${4}"
 	local _staging="${5}"
 	local _pkg_conf="${6}"
+	local _mirror_type="none"
 	local _signature_type="fingerprints"
 
 	if [ -z "${_template}" -o ! -f "${_template}" ]; then
@@ -949,7 +950,7 @@ setup_pkg_repo() {
 
 	sed \
 		-e "s/%%ARCH%%/${_target_arch}/" \
-		-e "s/%%OSVERSION%%/${GIT_REPO_BRANCH_OR_TAG}/" \
+		-e "s/%%OSVERSION%%/${POUDRIERE_BRANCH}/" \
 		-e "s/%%VERSION%%/${POUDRIERE_PORTS_BRANCH}/" \
 		-e "s/%%MIRROR_TYPE%%/${MIRROR_TYPE}/" \
 		-e "s/%%PKG_REPO_BRANCH_DEVEL%%/${_pkg_repo_branch_devel}/g" \
