@@ -10,7 +10,6 @@ dns/%%PRODUCT_NAME%%-pkg-bind
 dns/dnstop
 editors/nano
 editors/vim-console
-emulators/%%PRODUCT_NAME%%-pkg-Open-VM-Tools
 ftp/%%PRODUCT_NAME%%-pkg-FTP_Client_Proxy
 ftp/%%PRODUCT_NAME%%-pkg-tftpd
 mail/%%PRODUCT_NAME%%-pkg-mailreport
@@ -58,7 +57,6 @@ net/trafshow3
 net/vnstat
 security/%%PRODUCT_NAME%%-pkg-acme
 security/%%PRODUCT_NAME%%-pkg-nmap
-security/%%PRODUCT_NAME%%-pkg-snort
 security/%%PRODUCT_NAME%%-pkg-stunnel
 security/%%PRODUCT_NAME%%-pkg-sudo
 security/%%PRODUCT_NAME%%-pkg-suricata
