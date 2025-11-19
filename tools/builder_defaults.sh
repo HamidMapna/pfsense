@@ -280,6 +280,10 @@ export PKG_FINAL_RSYNC_SSH_PORT=${PKG_FINAL_RSYNC_SSH_PORT:-"22"}
 export SKIP_FINAL_RSYNC=${SKIP_FINAL_RSYNC:-}
 
 # pkg repo variables
+export PKG_REPO_BRANCH_DEVEL="v2_5_0"
+export PKG_REPO_BRANCH_RELEASE="v2_5_0"
+export PKG_REPO_BRANCH_NEXT="v2_5_1"
+export PKG_REPO_BRANCH_PREVIOUS="v2_4_5"
 export USE_PKG_REPO_STAGING="1"
 export PKG_REPO_SERVER_DEVEL=${PKG_REPO_SERVER_DEVEL:-"pkg+https://packages-beta.netgate.com/packages"}
 export PKG_REPO_SERVER_RELEASE=${PKG_REPO_SERVER_RELEASE:-"pkg+https://packages.netgate.com"}
@@ -294,6 +298,8 @@ else
 	export PKG_REPO_BRANCH_DEVEL=${PKG_REPO_BRANCH_DEVEL:-"${REPO_BRANCH_PREFIX}master"}
 	export PKG_REPO_BRANCH_STAGING=${PKG_REPO_BRANCH_STAGING:-${PKG_REPO_BRANCH_DEVEL}}
 fi
+
+echo "PKG_REPO_BRANCH_DEVEL='${PKG_REPO_BRANCH_DEVEL}'"
 
 if [ -n "${_IS_RELEASE}" -o -n "${_IS_RC}" ]; then
 	export PKG_REPO_SIGN_KEY=${PKG_REPO_SIGN_KEY:-"release${PRODUCT_NAME_SUFFIX}"}

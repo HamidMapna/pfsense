@@ -265,6 +265,9 @@ if [ "${BUILDACTION}" != "images" ]; then
 	exit 0
 fi
 
+echo "SNAPSHOTS='${SNAPSHOTS}'"
+echo "UPLOAD='${UPLOAD}'"
+
 if [ -n "${SNAPSHOTS}" -a -n "${UPLOAD}" ]; then
 	_required=" \
 		RSYNCIP \
